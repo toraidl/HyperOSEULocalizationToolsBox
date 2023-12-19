@@ -3,7 +3,7 @@
     <string name="mainactivity_textview_device_state">Device State</string>
     <string name="mainactivity_textview_root_state">Root State:</string>
     <string name="mainactivity_textview_xposed_module_state">Xposed Module State:</string>
-    <string name="mainactivity_textview_magisk_module_state">Magisk Module State:</string>
+    <string name="mainactivity_textview_magisk_module_state">Magisk/KSU Module State:</string>
     <string name="mainactivity_textview_toolsbox_version">Toolbox Version:</string>
     <string name="mainactivity_button_refresh_device_state">Refresh Device State</string>
     <string name="mainactivity_button_reset_app_permission">Reset App Permission</string>
@@ -20,8 +20,8 @@
     <string name="mainactivity_text_xposed_module_activated">Activated</string>
     <string name="mainactivity_text_xposed_module_inactivated">Inactivated</string>
     <string name="mainactivity_text_magisk_module_not_installed">Not installed!</string>
-    <string name="mainactivity_toast_magisk_module_tools_not_match">Warning: This version of toolbox doesn\'t match magisk module version!</string>
-    <string name="mainactivity_toast_not_magisk_module_installed">Error: Magisk module has not installed.</string>
+    <string name="mainactivity_toast_magisk_module_tools_not_match">Warning: This version of toolbox doesn\'t match magisk/ksu module version!</string>
+    <string name="mainactivity_toast_not_magisk_module_installed">Error: Magisk/KSU module has not installed.</string>
     <string name="mainactivity_toast_package_error_log_success">Done. File Path: /sdcard/MiuiEULocalization/ErrorLog.tar \\n This archieve contains basic info of this device. Don\'t share it in the public place.</string>
     <string name="mainactivity_button_clean_package_cache">Clean Package Cache</string>
     <string name="mainactivity_button_reset_package_restriction">Reset Package Restriction</string>

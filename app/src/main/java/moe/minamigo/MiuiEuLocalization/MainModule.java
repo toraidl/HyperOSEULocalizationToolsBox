@@ -82,14 +82,14 @@ public class MainModule implements IXposedHookLoadPackage {
                 XposedBridge.hookMethod(shouldSubstituteSmallIconMethod, new XC_MethodHook() {
                     @Override
                     protected void beforeHookedMethod(MethodHookParam methodHookParam) throws Throwable {
-                        final Class<?> classBuild = XposedHelpers.findClass("com.miui.systemui.BuildConfig", lpparam.classLoader);
-                        XposedHelpers.setStaticBooleanField(classBuild, "IS_INTERNATIONAL", true);
+                        final Class<?> classBuild = XposedHelpers.findClass("com.miui.utils.configs.MiuiConfigs", lpparam.classLoader);
+                        XposedHelpers.setStaticBooleanField(classBuild, "IS_INTERNATIONAL_BUILD", true);
                     }
 
                     @Override
                     protected void afterHookedMethod(MethodHookParam methodHookParam) throws Throwable {
-                        final Class<?> classBuild = XposedHelpers.findClass("com.miui.systemui.BuildConfig", lpparam.classLoader);
-                        XposedHelpers.setStaticBooleanField(classBuild, "IS_INTERNATIONAL", false);
+                        final Class<?> classBuild = XposedHelpers.findClass("com.miui.utils.configs.MiuiConfigs", lpparam.classLoader);
+                        XposedHelpers.setStaticBooleanField(classBuild, "IS_INTERNATIONAL_BUILD", false);
                     }
                 });
             } else{

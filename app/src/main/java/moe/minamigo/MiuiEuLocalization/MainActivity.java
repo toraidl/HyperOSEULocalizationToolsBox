@@ -13,7 +13,7 @@ import java.io.DataOutputStream;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
-    private boolean isMagiskModuleInstalled = false, isRooted = false;
+    private boolean isMagiskKSUModuleInstalled = false, isRooted = false;
     private static boolean isXposedModuleEnable = false;
 
     private TextView rootStateText, appVersionNameText, magiskModuleVersionText, xposedModuleStateText;
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         if (!this.isRooted) {
             Toast.makeText(this, nonrootToastString, Toast.LENGTH_SHORT).show();
             return;
-        } else if (!isMagiskModuleInstalled) {
+        } else if (!isMagiskKSUModuleInstalled) {
             Toast.makeText(this, this.getString(R.string.mainactivity_toast_not_magisk_module_installed), Toast.LENGTH_SHORT).show();
             return;
         } else {
@@ -184,13 +184,13 @@ public class MainActivity extends AppCompatActivity {
             this.appVersionNameText.setText(this.getString(R.string.mainactivity_text_check_app_version_failed));
         }
 
-        String magiskModuleVersion = SystemPropertiesProxy.get(this, "ro.miui.EULocalization");
+        String magiskModuleVersion = SystemPropertiesProxy.get(this, "ro.hyperos.EUlocalization");
         if (magiskModuleVersion == null || magiskModuleVersion.equals("")) {
             this.magiskModuleVersionText.setText(this.getString(R.string.mainactivity_text_magisk_module_not_installed));
-            this.isMagiskModuleInstalled = false;
+            this.isMagiskKSUModuleInstalled = false;
         } else {
             this.magiskModuleVersionText.setText(magiskModuleVersion);
-            this.isMagiskModuleInstalled = true;
+            this.isMagiskKSUModuleInstalled = true;
             if (!appVersion.equals(magiskModuleVersion)) {
                 Toast.makeText(this, this.getString(R.string.mainactivity_toast_magisk_module_tools_not_match), Toast.LENGTH_LONG).show();
             }
